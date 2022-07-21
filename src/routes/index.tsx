@@ -8,7 +8,7 @@ import { SignIn } from '../screens/SignIn';
 import { Loading } from '../components/Loading';
 
 export function Routes() {
-  const [loading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState<FirebaseAuthTypes.User>();
 
   useEffect(() =>{
@@ -21,7 +21,7 @@ export function Routes() {
     return subscriber;
   },[]);
 
-  if(loading){
+  if(isLoading){
     return <Loading/>
   }
 
